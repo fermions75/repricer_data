@@ -4,6 +4,20 @@ on:
   schedule:
     - cron: '*/10 * * * *'  # Every 10 minutes
 
+permissions:
+  actions: read|write|none
+  checks: read|write|none
+  contents: read|write|none
+  deployments: read|write|none
+  id-token: read|write|none
+  issues: read|write|none
+  discussions: read|write|none
+  packages: read|write|none
+  pages: read|write|none
+  pull-requests: read|write|none
+  repository-projects: read|write|none
+  security-events: read|write|none
+  statuses: read|write|none
 
 jobs:
   build:
@@ -47,7 +61,7 @@ jobs:
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
           
-          
+
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
