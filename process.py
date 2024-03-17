@@ -32,6 +32,7 @@ def connect_sheet():
         is_local = False
 
     if is_local:
+        print("I am in git server")
         credentials_info = {
             "type": os.environ['TYPE'],
             "project_id": os.environ['PROJECT_ID'],

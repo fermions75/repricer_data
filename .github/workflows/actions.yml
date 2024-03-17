@@ -36,6 +36,7 @@ jobs:
           AUTH_PROVIDER_X509_CERT_URL: ${{ secrets.AUTH_PROVIDER_X509_CERT_URL }}
           CLIENT_X509_CERT_URL: ${{ secrets.CLIENT_X509_CERT_URL }}
           UNIVERSE_DOMAIN: ${{ secrets.UNIVERSE_DOMAIN }}
+          IS_LOCAL: ${{ secrets.IS_LOCAL }}
         run: python main.py
           
       - name: commit files
