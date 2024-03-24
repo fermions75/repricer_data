@@ -15,6 +15,8 @@ def fetch_recent_data(pricing_data):
         
         if len(data_map) == 5:
             break
+
+    # print("this is recent data map ----> ", data_map)
     return data_map
 
 
@@ -117,12 +119,19 @@ def add_event_id(price_data, curr_bb_winner, prev_bb_winner):
 
 def get_bb_winner_curr(pricing_data):
     bb_data = {}
+    asin_list = []
     for data in pricing_data:
         seller_id = data['fba_seller_id']
         is_bb_winner = data['fba_is_buybox_winner']
         asin = data['ASIN']
+        asin_list.append(asin)
         if is_bb_winner:
             bb_data[asin] = seller_id
+    for asin in asin_list:
+        if asin not in bb_data:
+            bb_data[asin] = None
+
+    # print("this is bb data curr ----> ", bb_data)
     return bb_data
 
 
@@ -133,6 +142,7 @@ def get_bb_winner_prev(recent_data):
     for key, value in recent_data.items():
         asin = key
         asin_data = value
+        found_bb_winner = False
         for data in asin_data:
             seller_id = data[5]
             event_id = data[0]
@@ -142,6 +152,14 @@ def get_bb_winner_prev(recent_data):
                     "seller_id": seller_id,
                     "event_id": event_id
                 }
+                found_bb_winner = True
                 break
+        if not found_bb_winner:
+            # print("bb not found for asin -------> ", asin)
+            bb_data[asin] = {
+                "seller_id": None,
+                "event_id": None
+            }
+    # print("this is bb data prev ----> ", bb_data)
     return bb_data
         
