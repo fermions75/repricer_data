@@ -53,7 +53,7 @@ def connect_sheet():
         creds = Credentials.from_service_account_file("credentials.json", scopes=scopes)
 
     client = gspread.authorize(creds)
-    sheet_id = "1rwdptDXi7VfUWEp-EDfHY_qzTjrscPCFsj2y6fVTFE4"
+    sheet_id = "1jnns1MbA-l3FdwRfHeOwBQ-SPPpXUwZ-pu-6fRmzLrk"
     sheet = client.open_by_key(sheet_id)
     return sheet
 
