@@ -26,7 +26,9 @@ def main():
             "B0BR8D79QX",
             "B08R6DMVHH",
             "B0CLZH9RM4",
-            "B098QMD9LV"
+            "B098QMD9LV",
+            "B00099E7AG",
+            "B00099E79W",
         ],
         "last_row_number": process.get_last_row_number()
     }
