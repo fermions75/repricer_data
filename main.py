@@ -37,7 +37,7 @@ def main():
     response = requests.get(url, json=data)
     response_dict = response.json()
     status_code = response.status_code
-    msg = response_dict.get('message')
+    msg = response_dict.get('msg')
     if status_code != 200:
         print(f"Error: {msg}")
         write_msg_to_file(f"{datetime.now()} - Error: {msg}")
