@@ -349,3 +349,4 @@
 2024-05-23 13:05:08.838423 - Error: Error in GetPricingData ('Error in main_func: ', Exception('Error in connect_sheet: ', RefreshError('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})))
 2024-05-23 13:25:21.116046 - Error: Error in GetPricingData ('Error in main_func: ', Exception('Error in connect_sheet: ', RefreshError('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})))
 2024-05-23 13:43:45.949477 - Error: Error in GetPricingData ('Error in main_func: ', Exception('Error in connect_sheet: ', RefreshError('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})))
+2024-05-23 14:04:44.109952 - Success: successful
