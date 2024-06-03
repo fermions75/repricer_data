@@ -760,3 +760,4 @@
 2024-06-03 11:04:53.942657 - Success: successful
 2024-06-03 11:23:37.750137 - Success: successful
 2024-06-03 11:43:09.179611 - Success: successful
+2024-06-03 12:07:31.993180 - Error: Error in GetPricingData ('Error in main_func: ', Exception('Error in connect_sheet: ', APIError: [503]: The service is currently unavailable.))
